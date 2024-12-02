@@ -22,45 +22,99 @@ This project will be completed in phases. The first phase will be to work on thi
 ### Necessary Features
 What are the core features that your program should have? These should be things that __must__ be implemented in order to make the program useable/playable, not extra features that could be added to make the program more interesting/fun.
 
-YOUR ANSWERS HERE
+Ball, paddle, brick classes
+
+FOR BALL:
+Move func
+Die func
+Bounce off paddle func
+Bounce off Brick func
+Bounce off wall func
+
+FOR PADDLE:
+Move with mouse func
+Move with arrow key func
+
+FOR BRICK:
+Make grid func
+Collision with ball func
+
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.
 
-YOUR ANSWERS HERE
+Lives
+Score
+Power ups
+Play/Pause
+Reset
+Different maps (diff grid configurations)
+Color of bricks are a gradient (as in each brick) and also "pulsate". Color matches lives.
+Ball matches ball speed
+Moving Bricks
+Unbreakable bricks
+Paddle shrink
+ALOT MORE.
 
 ### Array Usage
 How will you be using arrays in this project?
 
 1D Array:
-- YOUR ANSER HERE
+
+For balls
 
 2D Array:
-- YOUR ANSWER HERE
+
+Bricks
 
 
 ### Controls
 How will your program be controlled? List all keyboard commands and mouse interactions.
 
 Keyboard Commands:
-- LIST OF COMMANDS HERE
+left and right arrow keys - move paddle
+
+EXTRA:
+R - reset
+Space - pause/play
 
 Mouse Control:
 - Mouse movement:
+  Mouse x - Paddle position
+  
 - Mouse pressed:
+  EXTRA:
+  Make new ball at mouse position when powerup
 
 
 ### Classes
 What classes will you be creating for this project? Include the instance variables and methods that you believe you will need. You will be required to create at least 2 different classes. If you are going to use classes similar to those we've made for previous assignments, you will have to add new features to them.
 
-CLASS NAME0
-- Instance variables:
-  - LIST INSTANCE VARS HERE
-- METHODS
-  - LIST METHODS HERE
+CLASS BALL
 
-CLASS NAME1
 - Instance variables:
-  - LIST INSTANCE VARS HERE
-- METHODS
-  - LIST METHODS HERE
+  
+PVector for ball pos
+Int for xspeed, yspeed, size, lives
+Color for color
+
+- METHODS:
+  
+  Move func
+  Die func
+  Bounce off paddle func
+  Bounce off Brick func
+  Bounce off wall func
+
+CLASS BRICK
+
+- Instance variables:
+  
+  PVector for brick pos
+  Int for width, height
+  Color for color
+  
+- METHODS:
+  
+  Make grid func
+  Collision with ball func
