@@ -25,36 +25,36 @@ What are the core features that your program should have? These should be things
 Ball, paddle, brick classes
 
 FOR BALL:
-Move func
-Die func
-Bounce off paddle func
-Bounce off Brick func
-Bounce off wall func
+Move func ;
+Die func ;
+Bounce off paddle func ;
+Bounce off Brick func ;
+Bounce off wall func ;
 
 FOR PADDLE:
-Move with mouse func
-Move with arrow key func
+Move with mouse func ;
+Move with arrow key func ;
 
 FOR BRICK:
-Make grid func
-Collision with ball func
+Make grid func ;
+Collision with ball func ;
 
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.
 
-Lives
-Score
-Power ups
-Play/Pause
-Reset
-Different maps (diff grid configurations)
-Color of bricks are a gradient (as in each brick) and also "pulsate". Color matches lives.
-Ball matches ball speed
-Moving Bricks
-Unbreakable bricks
-Paddle shrink
-ALOT MORE.
+Lives ;
+Score ;
+Power ups ;
+Play/Pause ;
+Reset ;
+Different maps (diff grid configurations) ;
+Color of bricks are a gradient (as in each brick) and also "pulsate". Color matches lives. ;
+Ball matches ball speed ;
+Moving Bricks ;
+Unbreakable bricks ;
+Paddle shrink ;
+ALOT MORE. ;
 
 ### Array Usage
 How will you be using arrays in this project?
@@ -75,8 +75,8 @@ Keyboard Commands:
 left and right arrow keys - move paddle
 
 EXTRA:
-R - reset
-Space - pause/play
+R - reset ;
+Space - pause/play ;
 
 Mouse Control:
 - Mouse movement:
@@ -93,44 +93,40 @@ What classes will you be creating for this project? Include the instance variabl
 CLASS BALL
 
 - Instance variables:
-PVector for ball pos
-Int for xspeed, yspeed, size, lives
-Color for color
+PVector for ball pos ;
+Int for xspeed, yspeed, size, lives ;
+Color for color ;
 
 - METHODS:
-  Display func
-  Move func
-  Die func
-  Bounce off paddle func
-  Bounce off Brick func
-  Bounce off wall func
+  Display func ;
+  Move func ;
+  Die func ;
+  Bounce off paddle func ;
+  Bounce off Brick func ;
+  Bounce off wall func ;
 
 CLASS BRICK
 
 - Instance variables:
-  PVector for brick pos
-  Int for width, height
-  Color for color
+  PVector for brick pos ;
+  Int for width, height ;
+  Color for color ;
 
 - METHODS:
-  Make grid func
-  Collision with ball func
-  Display func
+  Make grid func ;
+  Collision with ball func ;
+  Display func ;
 
 CLASS PADDLE
 
 
 - Instance variables:
-  PVector for paddle pos
-  Int for width,height
-  Color for color
+  PVector for paddle pos ;
+  Int for width,height ;
+  Color for color ;
 
 
 - METHODS:
-  Move with mouse func
-  Move with arrow key func
-  Display func
-  
-  
-  Make grid func
-  Collision with ball func
+  Move with mouse func ;
+  Move with arrow key func ;
+  Display func ;
