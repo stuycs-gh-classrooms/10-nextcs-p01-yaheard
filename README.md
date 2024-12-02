@@ -93,13 +93,12 @@ What classes will you be creating for this project? Include the instance variabl
 CLASS BALL
 
 - Instance variables:
-  
 PVector for ball pos
 Int for xspeed, yspeed, size, lives
 Color for color
 
 - METHODS:
-  
+  Display func
   Move func
   Die func
   Bounce off paddle func
@@ -109,12 +108,29 @@ Color for color
 CLASS BRICK
 
 - Instance variables:
-  
   PVector for brick pos
   Int for width, height
   Color for color
-  
+
 - METHODS:
+  Make grid func
+  Collision with ball func
+  Display func
+
+CLASS PADDLE
+
+
+- Instance variables:
+  PVector for paddle pos
+  Int for width,height
+  Color for color
+
+
+- METHODS:
+  Move with mouse func
+  Move with arrow key func
+  Display func
+  
   
   Make grid func
   Collision with ball func
