@@ -8,10 +8,10 @@ class Ball
   boolean alive;
   //variables
 
-  Ball(int bsize)
+  Ball(int bsize, Paddle pad)
   {
     this.bsize = bsize;
-    center = new PVector(width/2, height*0.8);
+    center = new PVector(pad.pos.x+pad.w/2, height*0.9);
     xspeed = int(random(0, 2));
     yspeed = -5;
     c = color(255);

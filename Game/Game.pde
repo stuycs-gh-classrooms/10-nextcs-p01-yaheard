@@ -1,37 +1,62 @@
-Ball b0;
+Ball[] b;
 int bsize = 15;
 Paddle p0;
 
 void setup() {
   size(750, 400);
-  b0 = new Ball(bsize);
+  b = new Ball[1];
   p0 = new Paddle(100);
+  makeBalls(b);
 }//setup
-
 
 void draw() {
   background(0);
-  b0.display();
+  displayBalls(b);
   if (p0.pos.x < 0) {
     p0.pos.x = 0;
   } else if (p0.pos.x+p0.w > width) {
     p0.pos.x = width - p0.w;
   }
   p0.display();
-  b0.move(p0);
+  moveBalls(b);
 }//draw
 
 
 void keyPressed() {
-  if (key == 'r') {
-    b0 = new Ball(bsize);
+  if (key == 'r' || key == 'R') {
+    makeBalls(b);
   } else if (keyCode == LEFT) {
     p0.moveL();
   } else if (keyCode == RIGHT) {
     p0.moveR();
+  } else if (key == 'e' || key == 'E') {
+    addBall(b);
+    makeBalls(b);
   }
 }//keyPressed
 
 void mouseMoved() {
-    p0.pos.x = mouseX-(p0.w)/2;
+  p0.pos.x = mouseX-(p0.w)/2;
 }//mouseMoved
+
+void makeBalls(Ball[] b) {
+  for (int i = 0; i < b.length; i++) {
+    b[i] = new Ball(bsize, p0);
+  }
+}//makeBalls
+
+void displayBalls(Ball[] b) {
+  for (int i = 0; i < b.length; i++) {
+    b[i].display();
+  }
+}//displayBalls
+
+void moveBalls(Ball[] b) {
+  for (int i = 0; i < b.length; i++) {
+    b[i].move(p0);
+  }
+}//moveBalls
+
+void addBall(Ball[] b) {
+  expand(b, b.length+1);
+}//addBall
