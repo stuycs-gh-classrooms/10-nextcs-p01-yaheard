@@ -30,9 +30,6 @@ void keyPressed() {
     p0.moveL();
   } else if (keyCode == RIGHT) {
     p0.moveR();
-  } else if (key == 'e' || key == 'E') {
-    b = addBall(b);
-    makeNew(b);
   }
 }//keyPressed
 
