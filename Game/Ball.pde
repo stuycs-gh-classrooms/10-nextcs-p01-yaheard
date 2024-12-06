@@ -1,7 +1,7 @@
 class Ball
 {
   PVector center;
-  int xspeed;
+  float xspeed;
   int yspeed;
   int bsize;
   color c;
@@ -16,9 +16,9 @@ class Ball
     yspeed = -5;
     c = color(255);
     if (xspeed == 0) {
-      xspeed = -5;
+      xspeed = (random(-7,-3));
     } else {
-      xspeed = 5;
+      xspeed = (random(3,7));
     }
     alive = true;
   } //construct

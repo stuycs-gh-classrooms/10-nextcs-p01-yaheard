@@ -24,14 +24,15 @@ void draw() {
 
 void keyPressed() {
   if (key == 'r' || key == 'R') {
+    b = resetBall();
     makeBalls(b);
   } else if (keyCode == LEFT) {
     p0.moveL();
   } else if (keyCode == RIGHT) {
     p0.moveR();
   } else if (key == 'e' || key == 'E') {
-    addBall(b);
-    makeBalls(b);
+    b = addBall(b);
+    makeNew(b);
   }
 }//keyPressed
 
@@ -57,6 +58,23 @@ void moveBalls(Ball[] b) {
   }
 }//moveBalls
 
-void addBall(Ball[] b) {
-  expand(b, b.length+1);
+Ball[] addBall(Ball[] b) {
+  Ball[] newb = new Ball[b.length+1];
+  for(int i = 0; i < b.length; i++) {
+    newb[i] = b[i];
+  }
+  return newb;
 }//addBall
+
+void makeNew(Ball[] b) {
+  for (int i = 0; i < b.length; i++) {
+    if (b[i] == null) {
+      b[i] = new Ball(bsize, p0);
+    }
+  }
+}//makeNew
+
+Ball[] resetBall() {
+  Ball[] oldb = new Ball[1];
+  return oldb;
+}//resetBall
