@@ -3,7 +3,7 @@ int bsize = 15;
 Paddle p0;
 
 void setup() {
-  size(750, 400);
+  size(750, 500);
   b = new Ball[1];
   p0 = new Paddle(100);
   makeBalls(b);
